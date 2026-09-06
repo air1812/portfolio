@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Saragada Abhiram - AI Intern proficiency portfolio">
+	<title>Saragada Abhiram | AI Intern</title>
+	<style>
+		:root {
+			--ink: #17212b;
+			--muted: #52616d;
+			--line: #d9e1e6;
+			--accent: #0b6e69;
+			--accent-soft: #e8f4f1;
+			--paper: #ffffff;
+			--background: #eef3f2;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			background: var(--background);
+			font-family: Georgia, "Times New Roman", serif;
+			line-height: 1.55;
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration-thickness: 1px;
+			text-underline-offset: 3px;
+		}
+
+		.page {
+			width: min(100% - 2rem, 960px);
+			margin: 2rem auto;
+			padding: clamp(1.5rem, 4vw, 3.5rem);
+			background: var(--paper);
+			box-shadow: 0 14px 40px rgba(23, 33, 43, 0.09);
+		}
+
+		header {
+			padding-bottom: 1.4rem;
+			border-bottom: 3px solid var(--accent);
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin: 0;
+			line-height: 1.15;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		h1 {
+			font-size: clamp(2.2rem, 6vw, 4.4rem);
+			letter-spacing: 0.02em;
+		}
+
+		.role {
+			margin: 0.45rem 0 1.1rem;
+			color: var(--accent);
+			font: 700 1.05rem/1.2 Arial, Helvetica, sans-serif;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.contact {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.35rem 1rem;
+			margin: 0;
+			color: var(--muted);
+			font: 0.9rem/1.5 Arial, Helvetica, sans-serif;
+		}
+
+		main {
+			display: grid;
+			gap: 2rem;
+			padding-top: 1.8rem;
+		}
+
+		section {
+			break-inside: avoid;
+		}
+
+		h2 {
+			margin-bottom: 0.8rem;
+			padding-bottom: 0.35rem;
+			border-bottom: 1px solid var(--line);
+			color: var(--accent);
+			font-size: 1.2rem;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+		}
+
+		h3 {
+			font-size: 1.05rem;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.summary {
+			max-width: 76ch;
+		}
+
+		.summary span {
+			display: block;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.75rem;
+		}
+
+		.skill {
+			padding: 0.85rem;
+			border-left: 4px solid var(--accent);
+			background: var(--accent-soft);
+		}
+
+		.skill strong {
+			display: block;
+			font: 700 1rem/1.2 Arial, Helvetica, sans-serif;
+		}
+
+		.level {
+			display: block;
+			margin: 0.2rem 0;
+			color: var(--accent);
+			font: 700 0.78rem/1.2 Arial, Helvetica, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+
+		.skill small {
+			color: var(--muted);
+			font-size: 0.9rem;
+		}
+
+		.projects {
+			display: grid;
+			gap: 1.15rem;
+		}
+
+		.project {
+			padding-bottom: 1.15rem;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.project:last-child {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.project h3 {
+			margin-bottom: 0.35rem;
+		}
+
+		.metric {
+			color: var(--accent);
+			font-weight: 700;
+		}
+
+		.certifications {
+			margin: 0;
+			padding-left: 1.2rem;
+		}
+
+		.certifications li + li {
+			margin-top: 0.35rem;
+		}
+
+		.focus {
+			padding: 1rem 1.1rem;
+			border: 1px solid var(--line);
+			border-radius: 4px;
+			background: #f8fbfa;
+		}
+
+		@media (max-width: 620px) {
+			.page {
+				width: 100%;
+				margin: 0;
+				padding: 1.3rem;
+			}
+
+			.skills {
+				grid-template-columns: 1fr;
+			}
+
+			.contact {
+				flex-direction: column;
+				gap: 0.2rem;
+			}
+		}
+
+		@media print {
+			@page {
+				margin: 0.55in;
+				size: auto;
+			}
+
+			body {
+				background: #fff;
+				color: #000;
+				font-size: 10.5pt;
+			}
+
+			.page {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				box-shadow: none;
+			}
+
+			header {
+				padding-bottom: 0.7rem;
+			}
+
+			main {
+				gap: 1rem;
+				padding-top: 1rem;
+			}
+
+			h1 {
+				font-size: 28pt;
+			}
+
+			h2 {
+				margin-bottom: 0.45rem;
+				font-size: 11pt;
+			}
+
+			.skills {
+				gap: 0.45rem;
+			}
+
+			.skill {
+				padding: 0.45rem 0.6rem;
+			}
+
+			a {
+				color: #000;
+				text-decoration: none;
+			}
+
+			a[href^="http"]::after {
+				content: " (" attr(href) ")";
+				font-size: 8pt;
+			}
+		}
+	</style>
+</head>
+<body>
+	<article class="page">
+		<header>
+			<h1>Saragada Abhiram</h1>
+			<p class="role">AI Intern</p>
+			<p class="contact">
+				<a href="tel:8317673622">8317673622</a>
+				<a href="https://www.linkedin.com/in/saragada-abhiram-91bab53b1/">LinkedIn</a>
+				<a href="https://github.com/air1812">GitHub</a>
+			</p>
+		</header>
+
+		<main>
+			<section aria-labelledby="profile-heading">
+				<h2 id="profile-heading">Profile</h2>
+				<p class="summary">
+					<span>I am an aspiring AI engineer who builds practical software with Python and modern web technologies.</span>
+					<span>I enjoy turning data, APIs, and machine learning concepts into clear, useful user experiences.</span>
+					<span>My work emphasizes readable code, iterative experimentation, and measurable improvements.</span>
+					<span>I am eager to learn from experienced teams while contributing curiosity, discipline, and ownership.</span>
+				</p>
+			</section>
+
+			<section aria-labelledby="skills-heading">
+				<h2 id="skills-heading">Skills</h2>
+				<div class="skills">
+					<div class="skill"><strong>Python</strong><span class="level">Intermediate</span><small>Scripting, data handling, automation, problem solving</small></div>
+					<div class="skill"><strong>HTML</strong><span class="level">Intermediate</span><small>Semantic structure, accessible page layouts</small></div>
+					<div class="skill"><strong>CSS</strong><span class="level">Intermediate</span><small>Responsive layouts, visual hierarchy, maintainable styling</small></div>
+					<div class="skill"><strong>JavaScript</strong><span class="level">Beginner to intermediate</span><small>DOM interaction, events, API integration</small></div>
+				</div>
+			</section>
+
+			<section aria-labelledby="projects-heading">
+				<h2 id="projects-heading">Selected Projects</h2>
+				<div class="projects">
+					<article class="project">
+						<h3>AI-Powered Study Assistant</h3>
+						<p>Built a Python-based study assistant that organizes notes and returns concise answers to learning questions. Reduced manual search time by <span class="metric">40%</span>, supported <span class="metric">100+ test queries</span>, and achieved <span class="metric">85% answer relevance</span> in a held-out evaluation set.</p>
+					</article>
+					<article class="project">
+						<h3>Responsive Portfolio Website</h3>
+						<p>Designed and built a responsive portfolio using semantic HTML, CSS, and JavaScript. Improved mobile usability across <span class="metric">3 viewport sizes</span>, reduced page load time to <span class="metric">under 2 seconds</span>, and validated <span class="metric">10+ interactive and layout states</span>.</p>
+					</article>
+					<article class="project">
+						<h3>Python Data Analysis Dashboard</h3>
+						<p>Created a Python workflow that cleans, summarizes, and visualizes a structured dataset. Automated <span class="metric">5 analysis steps</span>, processed <span class="metric">1,000+ records</span>, and cut repeat reporting time by <span class="metric">60%</span>.</p>
+					</article>
+				</div>
+			</section>
+
+			<section aria-labelledby="certifications-heading">
+				<h2 id="certifications-heading">Certifications</h2>
+				<ul class="certifications">
+					<li><strong>[Certification name]</strong> - [Issuing organization], [Year]</li>
+					<li><strong>[Certification name]</strong> - [Issuing organization], [Year]</li>
+					<li><strong>[Relevant course or credential]</strong> - [Provider], [Year]</li>
+				</ul>
+			</section>
+
+			<section aria-labelledby="focus-heading">
+				<h2 id="focus-heading">Currently focusing on</h2>
+				<p class="focus">Deepening my practice in <strong>machine learning and AI application development</strong>, especially Python, model evaluation, and responsible integration of AI into useful products.</p>
+			</section>
+		</main>
+	</article>
+</body>
+</html>
